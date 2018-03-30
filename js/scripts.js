@@ -1,7 +1,6 @@
 var counterArray = [];
 var checkNumber = [];
-// var fup = [];
-// console.log(fup);
+var furtherArray =[];
 var counter = function(input) {
   for (var checkNumber = 0; checkNumber <= input; checkNumber++) {
     counterArray.push(checkNumber);
@@ -14,27 +13,27 @@ var beepBooper = function(numberList) {
     var checkNumber2 = numberList[i];
       console.log(checkNumber2);
     if (checkNumber2 !== 0 && checkNumber2 % 3 === 0) {
-      checkNumber.push("I'm sorry Dave, I'm afraid I can't do that");
-    } else if (checkNumber2 === 1) {
-      checkNumber.push("Beep!");
-    } else if (checkNumber2 === 0) {
-      checkNumber.push("Boop!");
+      checkNumber.push("I'm sorry Dave I'm afraid I can't do that");
     } else {
       checkNumber.push(checkNumber2);
     }
   }
 }
 
-// var furtherBeepBooper = function(stringArray) {
-//   for (var i = 0; i < stringArray.length; i++) {
-//     var oneZero = stringArray[i];
-//     if (oneZero.charAt(0) === "1") {
-//       fup.push("Beep!");
-//     } else if (oneZero.charAt(0) === ) {
-//
-//     }
-//   }
-// }
+  var furtherBeepBooper = function(final) {
+  for (var i = 0; i < final.length; i++) {
+    debugger;
+    var checkNumber3 = final[i];
+    var wtf = checkNumber3.toString();
+    wtf.charAt(i);
+    console.log(checkNumber3);
+    if (wtf == "1") {
+      alert("hooray!!!!!!!");
+    } else {
+      alert("booooo!");
+    }
+  }
+}
 
   $(document).ready(function() {
     $("#form1").submit(function(event) {
@@ -42,12 +41,10 @@ var beepBooper = function(numberList) {
 
       counter(input);
       beepBooper(counterArray);
-
-
-      // var stringCheckNumber = checkNumber.toString();
-      // console.log(stringCheckNumber);
-      // var stringArray = stringCheckNumber.split(",");
-      // furtherBeepBooper(stringArray);
+      var stringNumber = checkNumber.toString();
+      var final = stringNumber.split(",")
+      console.log(final);
+      furtherBeepBooper(checkNumber)
 
 
       $("#output").append(checkNumber);
