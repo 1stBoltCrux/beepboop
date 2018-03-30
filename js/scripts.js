@@ -2,6 +2,7 @@ var counterArray = [];
 var checkNumber = [];
 var checkAgain =[];
 var arrayX = [];
+console.log(checkAgain);
 // var furtherArray =[];
 var counter = function(input) {
   for (var checkNumber = 0; checkNumber <= input; checkNumber++) {
@@ -12,7 +13,7 @@ var counter = function(input) {
 
 
 var beepBooper = function(numberList) {
-  debugger;
+
   for (var i = 0; i < numberList.length; i++) {
     var checkNumber2 = numberList[i];
       console.log(checkNumber2);
@@ -27,17 +28,19 @@ var beepBooper = function(numberList) {
     }
   }
 }
-// var arrayPlacer = function(array) {
-//   debugger;
-//   for (var i = 0; i < array.length; i++) {
-//     var pushArray = array[i];
-//     arrayX.push(pushArray);
-//     console.log(pushArray);
-//     // checkNumber2.push(arrayX);
-//     // console.log(checkNumber2);
-//
-//   }
-// }
+var arrayPlacer = function(array) {
+  debugger;
+  for (var i = 0; i < array.length; i++) {
+    var pushArray = array[i];
+    arrayX.push(pushArray);
+    console.log(pushArray);
+    checkAgain.push(arrayX);
+    console.log(checkAgain);
+    arrayX = [];
+    checkAgain = [];
+
+  }
+}
 //   var furtherBeepBooper = function(final) {
 //   for (var i = 0; i < final.length; i++) {
 //     debugger;
@@ -63,7 +66,7 @@ var beepBooper = function(numberList) {
       counter(input);
       beepBooper(counterArray);
       // console.log(checkNumber);
-      // arrayPlacer(checkNumber);
+      arrayPlacer(checkNumber);
       // var stringNumber = checkNumber.toString();
       // var final = stringNumber.split(",")
       // console.log(final);
