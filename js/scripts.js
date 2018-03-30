@@ -1,7 +1,7 @@
 var counterArray = [];
 var checkNumber = [];
-var fup = [];
-console.log(fup);
+// var fup = [];
+// console.log(fup);
 var counter = function(input) {
   for (var checkNumber = 0; checkNumber <= input; checkNumber++) {
     counterArray.push(checkNumber);
@@ -25,16 +25,16 @@ var beepBooper = function(numberList) {
   }
 }
 
-var furtherBeepBooper = function(stringArray) {
-  for (var i = 0; i < stringArray.length; i++) {
-    var oneZero = stringArray[i];
-    if (oneZero.charAr(0) === "1" ) {
-      fup.push("Beep!");
-    } else {
-
-    }
-  }
-}
+// var furtherBeepBooper = function(stringArray) {
+//   for (var i = 0; i < stringArray.length; i++) {
+//     var oneZero = stringArray[i];
+//     if (oneZero.charAt(0) === "1") {
+//       fup.push("Beep!");
+//     } else if (oneZero.charAt(0) === ) {
+//
+//     }
+//   }
+// }
 
   $(document).ready(function() {
     $("#form1").submit(function(event) {
@@ -43,11 +43,11 @@ var furtherBeepBooper = function(stringArray) {
       counter(input);
       beepBooper(counterArray);
 
-debugger;
-      var stringCheckNumber = checkNumber.toString();
-      console.log(stringCheckNumber);
-      var stringArray = stringCheckNumber.split(",");
-      furtherBeepBooper(stringArray);
+
+      // var stringCheckNumber = checkNumber.toString();
+      // console.log(stringCheckNumber);
+      // var stringArray = stringCheckNumber.split(",");
+      // furtherBeepBooper(stringArray);
 
 
       $("#output").append(checkNumber);
