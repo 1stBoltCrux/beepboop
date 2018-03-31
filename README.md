@@ -1,11 +1,11 @@
-BDD
+
 # _Ted Leary's Track Suggester_
 
-#### _This is a survey site_
+#### _This site provides a user with the opportunity to translate numbers into beeps and boops._
 
 #### _By Ted Leary_
 
-### _Behavior Driven Development Breakdown_
+## _Behavior Driven Development Breakdown_
 
 * _1. Program replaces 0 with "Beep"
 input: 0
@@ -20,14 +20,14 @@ output: "Beep"_
 input: 9
 output: "I'm sorry Dave, I'm afraid I can't do that."_
 * _5. Program should determine which action to take on a number with both 1's, 0's and numbers divisible by 3 in an order of importance.
-input: 30_
-output "I'm sorry Dave, I'm afraid I can't do that."
+input: 30
+output "I'm sorry Dave, I'm afraid I can't do that."_
 * _6. Program will display user input with 1's replaced with "Boop" and 0's replaced with "Beep" and all numbers divisible by 3 replaced with "I'm sorry Dave, I'm afraid I can't do that."
 input: 10
 output: "Beep"_
 
 
-## The purpose of this website is to collect information from the user through a survey in order to determine what track at epicodus would be right for them.
+## The purpose of this website is to allow the user to input a number to be translated into beeps and boops.
 
 * _clone the repository from github_
 
@@ -43,10 +43,9 @@ _If you have any questions or concerns regarding this application, please feel f
 
 _This site uses HTML, CSS, and Bootstrap version 3.3.7, Jquery version 3.3.1, and JS_
 
-## Site repository and gh-pages url
+## Site repository
 
-https://github.com/1stBoltCrux/tracksuggester
-https://1stboltcrux.github.io/tracksuggester/index.html
+https://github.com/1stBoltCrux/beepboop.git
 
 ### License
 

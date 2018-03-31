@@ -30,7 +30,7 @@ var arrayChecker = function(checkAgain) {
     } else if (arrayArray2.indexOf("0") !== -1) {
       finalArray.push(" Beep! ");
     } else {
-      finalArray.push(arrayArray);
+      finalArray.push(" " + arrayArray + " ");
     }
   }
 }
