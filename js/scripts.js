@@ -37,8 +37,20 @@ var arrayPlacer = function(array) {
     checkAgain.push(arrayX);
     console.log(checkAgain);
     arrayX = [];
-    checkAgain = [];
 
+
+  }
+}
+
+var arrayChecker = function(checkAgain) {
+  debugger;
+  for (var i = 0; i < checkAgain.length; i++) {
+    var arrayArray = checkAgain[i];
+    var arrayArray2 = arrayArray.toString();
+    if (arrayArray2.indexOf("1") !== -1) {
+      alert("hallelujah");
+
+    }
   }
 }
 //   var furtherBeepBooper = function(final) {
@@ -67,6 +79,7 @@ var arrayPlacer = function(array) {
       beepBooper(counterArray);
       // console.log(checkNumber);
       arrayPlacer(checkNumber);
+      arrayChecker(checkAgain);
       // var stringNumber = checkNumber.toString();
       // var final = stringNumber.split(",")
       // console.log(final);
