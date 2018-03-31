@@ -1,7 +1,9 @@
 var counterArray = [];
-var checkNumber = [];
+// var checkNumber = [];
 var checkAgain =[];
 var arrayX = [];
+var finalArray = [];
+console.log(finalArray);
 console.log(checkAgain);
 // var furtherArray =[];
 var counter = function(input) {
@@ -12,22 +14,18 @@ var counter = function(input) {
 }
 
 
-var beepBooper = function(numberList) {
-
-  for (var i = 0; i < numberList.length; i++) {
-    var checkNumber2 = numberList[i];
-      console.log(checkNumber2);
-    if (checkNumber2 !== 0 && checkNumber2 % 3 === 0) {
-      checkNumber.push("I'm sorry Dave, I'm afraid I can't do that");
-    } else if (checkNumber2 === 1 || checkNumber2 % 10 === 1) {
-      checkNumber.push("Boop!");
-    } else if (checkNumber2 === 0) {
-      checkNumber.push("Beep!");
-    } else {
-      checkNumber.push(checkNumber2);
-    }
-  }
-}
+// var beepBooper = function(numberList) {
+//
+//   for (var i = 0; i < numberList.length; i++) {
+//     var checkNumber2 = numberList[i];
+//       console.log(checkNumber2);
+//     if (checkNumber2 !== 0 && checkNumber2 % 3 === 0) {
+//       checkNumber.push("I'm sorry Dave, I'm afraid I can't do that");
+//     } else {
+//       checkNumber.push(checkNumber2);
+//     }
+//   }
+// }
 var arrayPlacer = function(array) {
   debugger;
   for (var i = 0; i < array.length; i++) {
@@ -47,8 +45,14 @@ var arrayChecker = function(checkAgain) {
   for (var i = 0; i < checkAgain.length; i++) {
     var arrayArray = checkAgain[i];
     var arrayArray2 = arrayArray.toString();
-    if (arrayArray2.indexOf("1") !== -1) {
-      alert("hallelujah");
+    if (arrayArray > 2 && arrayArray % 3 === 0) {
+      finalArray.push(" I'm sorry Dave, I'm afraid I can't do that ");
+    } else if (arrayArray2.indexOf("1") !== -1) {
+    finalArray.push(" Boop! ");
+  } else if (arrayArray2.indexOf("0") !== -1) {
+      finalArray.push(" Beep! ");
+    } else {
+      finalArray.push(arrayArray);
 
     }
   }
@@ -76,17 +80,17 @@ var arrayChecker = function(checkAgain) {
       var input = parseInt($("#input1").val());
 
       counter(input);
-      beepBooper(counterArray);
+      // beepBooper(counterArray);
       // console.log(checkNumber);
-      arrayPlacer(checkNumber);
+      arrayPlacer(counterArray);
       arrayChecker(checkAgain);
       // var stringNumber = checkNumber.toString();
       // var final = stringNumber.split(",")
       // console.log(final);
       // furtherBeepBooper(checkNumber)
 
-
-      $("#output").append(checkNumber);
+      var outputString = finalArray
+      $("#output").append(finalArray);
 
 
     });
