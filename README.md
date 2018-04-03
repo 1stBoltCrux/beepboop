@@ -1,5 +1,5 @@
 
-# _Ted Leary's Beep Booperr_
+# _Ted Leary's Beep Booper_
 
 #### _This site provides a user with the opportunity to translate numbers into beeps and boops._
 

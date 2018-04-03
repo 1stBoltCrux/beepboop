@@ -1,0 +1,12 @@
+.container {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h3 {
+  color: #24b8d6;
+}
+
+.btn {
+  margin-left: 200px;
+  margin-bottom: 20px;
+}

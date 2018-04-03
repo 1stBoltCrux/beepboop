@@ -24,7 +24,7 @@ var arrayChecker = function(checkAgain) {
     var arrayArray = checkAgain[i];
     var arrayArray2 = arrayArray.toString();
     if (arrayArray > 2 && arrayArray % 3 === 0) {
-      finalArray.push(" I'm sorry Dave, I'm afraid I can't do that ");
+      finalArray.push(" I'm sorry " + "<span class='name'></span>" + "," + " I'm afraid I can't do that ");
     } else if (arrayArray2.indexOf("1") !== -1) {
     finalArray.push(" Boop! ");
     } else if (arrayArray2.indexOf("0") !== -1) {
@@ -40,12 +40,13 @@ var arrayChecker = function(checkAgain) {
     $("#form1").submit(function(event) {
         event.preventDefault();
       var input = parseInt($("#input1").val());
-
+      var input2 = $("#input2").val();
       counter(input);
       arrayPlacer(counterArray);
       arrayChecker(checkAgain);
 
       $("#output").append(finalArray);
+      $(".name").text(input2);
 
 
     });
