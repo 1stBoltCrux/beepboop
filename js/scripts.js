@@ -37,6 +37,7 @@ var arrayChecker = function(checkAgain) {
 // --------------FRONT END-----------------------
 
   $(document).ready(function() {
+    $(".dave").hide();
     $("#form1").submit(function(event) {
         event.preventDefault();
       var input = parseInt($("#input1").val());
@@ -44,7 +45,8 @@ var arrayChecker = function(checkAgain) {
       counter(input);
       arrayPlacer(counterArray);
       arrayChecker(checkAgain);
-
+      $(".dave").show();
+      $("#hal").hide();
       $("#output").append(finalArray);
       $(".name").text(input2);
 

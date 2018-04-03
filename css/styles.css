@@ -1,5 +1,8 @@
 .container {
   font-family: 'Share Tech Mono', monospace;
+  background-image: url("../imgs/space.jpg");
+  color: #24b8d6;
+  font-size: 18px;
 }
 
 h3 {
@@ -7,6 +10,19 @@ h3 {
 }
 
 .btn {
-  margin-left: 200px;
+  margin-left: 155px;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#dave {
+width: 100%;
+}
+
+#hal {
+  width: 70%;
+}
+
+.rightcolumn {
+
 }

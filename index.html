@@ -14,20 +14,27 @@
       <h3>Welcome to The Beep Booper 9000</h3>
       <form id="form1">
         <div class="form-group">
-          <input id="input1" type="text" class="form-control" placeholder="Please enter a number">
+          <input id="input1" type="text" class="form-control" required placeholder="Please enter a number">
         </div>
         <div class="form-group">
-          <input id="input2" type="text" class="form-control" placeholder="Please enter your name">
+          <input id="input2" type="text" class="form-control" required placeholder="Please enter your name">
         </div>
         <button type="submit" class="btn btn-info" name="button">Submit!</button>
       </form>
       <div class="row">
-        <div class="col-md-6">
-          <img src="imgs/hal.jpg.jpg" alt="">
+        <div class="leftcolumn">
+          <div class="col-md-6">
+            <img src="imgs/hal.png" id="hal" alt="hal 9000">
+            <div class="dave">
+              <img src="imgs/dave.jpg" id="dave" alt="dave">
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 well">
-          <h3>Hello <span class="name"></span>.....</h3>
-          <div id="output">
+        <div class="rightcolumn">
+          <div class="col-md-6">
+            <h3>Hello <span class="name"></span>.....</h3>
+            <div id="output">
+            </div>
           </div>
         </div>
       </div>
