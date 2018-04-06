@@ -1,31 +1,32 @@
 // -----------------BACK END-----------------
 
-var counterArray = [];
-var parentArray = [];
-var checkAgain =[];
-var finalArray = [];
-
 // "counter" function takes in value from input and creates an array from 0 to that input value //
 
 var counter = function(input) {
+  var counterArray = [];
   for (var checkNumber = 0; checkNumber <= input; checkNumber++) {
     counterArray.push(checkNumber);
   }
+  return counterArray;
 }
 // "arrayPlacer" function pushes every element within counterArray into "parentArray" then pushes "parentArray" into the "checkAgain" array, then "parentArray" is reset to empty. This creates an array of arrays which will then be run through a loop within the "arrayChecker" function //
 
-var arrayPlacer = function(array) {
-  for (var i = 0; i < array.length; i++) {
-    var pushArray = array[i];
+var arrayPlacer = function(counterArray) {
+  var checkAgain =[];
+  var parentArray = [];
+  for (var i = 0; i < counterArray.length; i++) {
+    var pushArray = counterArray[i];
     parentArray.push(pushArray);
     checkAgain.push(parentArray);
     parentArray = [];
   }
+  return checkAgain;
 }
 
 // "arrayChecker" cycles through each array within "checkAgain", changes some of those arrays to strings and keeps some of them as numeric values, then passes them through a conditional statement //
 
 var arrayChecker = function(checkAgain) {
+  var finalArray = [];
   for (var i = 0; i < checkAgain.length; i++) {
     var numberSelect = checkAgain[i];
     var stringSelect = numberSelect.toString();
@@ -38,7 +39,9 @@ var arrayChecker = function(checkAgain) {
     } else {
       finalArray.push(" " + numberSelect + " ");
     }
+    
   }
+  return finalArray;
 }
 // --------------FRONT END-----------------------
 
@@ -48,15 +51,13 @@ $(document).ready(function() {
     event.preventDefault();
     var input = parseInt($("#input1").val());
     var input2 = $("#input2").val();
-    counter(input);
-    arrayPlacer(counterArray);
-    arrayChecker(checkAgain);
+    var counterArray = counter(input);
+    var checkAgain = arrayPlacer(counterArray);
+    var finalArray = arrayChecker(checkAgain);
+
     $(".dave").show();
     $("#hal").hide();
     $("#output").append(finalArray);
     $(".name").text(input2);
-
-
   });
-
 });
